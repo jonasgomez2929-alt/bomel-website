@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bomel Resort — Mountain Stay on Public Land</title>
+
+<!--
+  ============================================================
+  HOW TO ADD YOUR OWN PHOTOS
+  ------------------------------------------------------------
+  Every image slot on this page is a <div class="ph"> with a
+  data-label. These render as styled placeholders so the page
+  looks finished before you add real photos.
+
+  To swap ONE in for a real photo, KEEP the outer div (it sets the
+  box's size/shape) and add an <img class="ph-img"> INSIDE it:
+      <div class="ph" data-label="Deluxe suite interior">
+        <img class="ph-img" src="images/your-photo.jpg" alt="Deluxe suite interior">
+      </div>
+  Do not delete the outer div or the "ph" class on it — .ph-img
+  pins itself to that div's exact edges, so without it the photo
+  won't know what box to fill.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="main-page.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER / NAVIGATION
+     Sticky bar that goes solid on scroll. Hamburger only shows
+     on small screens and opens a dark panel sliding in from the
+     left with the same nav links.
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="main-page.html" class="brand" aria-label="Bomel Resort — home">
+      <!--
+        LOGO: swap the <svg> below for your own logo image, e.g.
+            <img src="images/logo.png" alt="Bomel Resort logo">
+        .brand-mark is a fixed-size frame with object-fit: contain,
+        so whatever image you drop in scales to fit it automatically
+        — no manual resizing needed, in this header or the mobile one.
+      -->
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="19" cy="19" r="18" stroke="#E2793A" stroke-width="1"/>
+          <img src="/dfc496ea-1aab-46b0-8690-8d1f5ca9658e-removebg-preview.png" alt="Bomel Resort logo" style="width: 100%; height: 100%; object-fit: contain;"/>
+          <circle cx="26" cy="11" r="2.2" fill="#E2793A"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        Bomel<span class="brand-sub">Cozy&nbsp;Resort</span>
+      </span>
+    </a>
+
+    <!--
+      MAIN NAV: each link below opens a separate page on the site
+      (not an anchor on this page), so clicking one will not scroll —
+      it navigates away. To wire one up, just change the href to your
+      real page filename and edit the visible text between the tags.
+      Nothing else in the code needs to change.
+    -->
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="/main-page.html" class="nav-link">Home</a></li>
+        <li><a href="/Header/accomodation.html" class="nav-link">Accommodations</a></li>
+        <li><a href="/Header/facilities.html" class="nav-link">Facilities</a></li>
+        <li><a href="/Header/rates.html" class="nav-link">Rates</a></li>
+        <li><a href="/Header/gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="/Header/location.html" class="nav-link">Location</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="/book.html" class="btn btn-gold header-book">Book Now</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile slide-in menu (left side bar) — same links as the main nav above -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile primary">
+    <ul>
+      <li><a href="/main-page.html" class="mobile-link">Home</a></li>
+      <li><a href="/Header/accomodation.html" class="mobile-link">Accommodations</a></li>
+      <li><a href="/Header/facilities.html" class="mobile-link">Facilities</a></li>
+      <li><a href="/Header/rates.html" class="mobile-link">Rates</a></li>
+      <li><a href="/Header/gallery.html" class="mobile-link">Gallery</a></li>
+      <li><a href="/Header/location.html" class="mobile-link">Location</a></li>
+    </ul>
+    <a href="/book.html" class="btn btn-gold mobile-book">Book Now</a>
+  </nav>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<main>
+
+<!-- ============================================================
+     HERO
+     Split layout: copy on the left, an auto-scrolling horizontal
+     photo strip (marquee) on the right. Stacks on mobile.
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">Public land, private stillness</p>
+    <h1>The mountain<br>doesn't perform<br>for you.</h1>
+    <p class="hero-sub">Bomel Resort sits on protected public mountainland, where the trails, the fog, and the treeline were here long before us. We just built somewhere quiet to stay in the middle of it.</p>
+    <div class="hero-actions">
+      <a href="/book.html" class="btn btn-gold">Reserve a stay</a>
+      <a href="/Header/accomodation.html" class="btn btn-ghost">See rooms</a>
+    </div>
+  </div>
+
+  <div class="hero-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="ph ph-tall" data-label="Ridge trail at sunrise"><img class="ph-img" src="/photomain/Punta Sayulita Resort & Residences (Photo_ Petr….jpg" alt="Ridge trail at sunrise"></div>
+      <div class="ph ph-tall" data-label="Cabin row in the pines"><img class="ph-img" src="/photomain/112660428174370375.jpg" alt="Cabin row in the pines"></div>
+      <div class="ph ph-tall" data-label="Communal firepit at dusk"><img class="ph-img" src="/photomain/17 Backyard Retreat Ideas to Create Your Own Outdoor Oasis -.jpg" alt="Communal firepit at dusk"></div>
+      <div class="ph ph-tall" data-label="Spring-fed pool"><img class="ph-img" src="/photomain/54 Enchanting Cabin Houses To Inspire Your Next Getaway - Top Cascade Flare.jpg" alt="Spring-fed pool"></div>
+      <div class="ph ph-tall" data-label="Mist over the valley"><img class="ph-img" src="/photomain/5629568279213337.jpg" alt="Mist over the valley"></div>
+      <!-- duplicate set for seamless loop — same photos, same order -->
+      <div class="ph ph-tall" data-label="Ridge trail at sunrise"><img class="ph-img" src="/photomain/Punta Sayulita Resort & Residences (Photo_ Petr….jpg" alt="Ridge trail at sunrise"></div>
+      <div class="ph ph-tall" data-label="Cabin row in the pines"><img class="ph-img" src="/photomain/112660428174370375.jpg" alt="Cabin row in the pines"></div>
+      <div class="ph ph-tall" data-label="Communal firepit at dusk"><img class="ph-img" src="/photomain/17 Backyard Retreat Ideas to Create Your Own Outdoor Oasis -.jpg" alt="Communal firepit at dusk"></div>
+      <div class="ph ph-tall" data-label="Spring-fed pool"><img class="ph-img" src="/photomain/54 Enchanting Cabin Houses To Inspire Your Next Getaway - Top Cascade Flare.jpg" alt="Spring-fed pool"></div>
+      <div class="ph ph-tall" data-label="Mist over the valley"><img class="ph-img" src="/photomain/5629568279213337.jpg" alt="Mist over the valley"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT / INTRO
+     ============================================================ -->
+<section class="about reveal" id="about">
+  <div class="about-inner">
+    <div class="about-media">
+      <div class="ph ph-square" data-label="Guide pointing out the ridgeline">
+        <img class="ph-img" src="/S234main/download (2).jpg" alt="Guide pointing out the ridgeline">
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">Why Bomel Resort?</p>
+      <h2>Built into public land, not fenced off from it</h2>
+      <p>Most of the mountain around us belongs to everyone — the trailheads, the ridge lookouts, the creek that runs past the lodge. Bomel Resort was built to sit inside that, not wall it off. Guests can walk straight from their cabin door onto the public trail network, no shuttle required.</p>
+      <p>Pools and rooms are simple and warm. Meals lean on what's grown nearby. And the loudest thing after 9pm is usually the creek.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHAT'S HERE
+     A quick preview across rooms, cottages, the pool, and dining
+     — each card points to the page with the full detail.
+     ============================================================ -->
+<section class="accommodations reveal" id="accommodations">
+  <p class="eyebrow center">What's here</p>
+  <h2 class="center">A quick look before you book</h2>
+
+  <div class="room-grid">
+    <article class="room-card">
+      <div class="ph ph-room" data-label="Ridge Cabin exterior">
+        <img class="ph-img" src="/S234main/105060603800508365.jpg" alt="Ridge Cabin exterior">
+      </div>
+      <h3>Cottage</h3>
+      <p>A spacious retreat where family and friends can gather, share laughter, and feel truly connected.</p>
+      <div class="room-card-footer">
+      </div>
+    </article>
+
+    <article class="room-card">
+      <div class="ph ph-room" data-label="Pine House cottage exterior">
+        <img class="ph-img" src="/S234main/17732992278083839.jpg" alt="Pine House cottage exterior">
+      </div>
+      <h3>Room</h3>
+      <p>A peaceful sanctuary where quiet comfort wrapped in total stillness welcomes you each day.</p>
+      <div class="room-card-footer">
+      </div>
+    </article>
+
+    <article class="room-card">
+      <div class="ph ph-room" data-label="Spring-fed pool">
+        <img class="ph-img" src="/S234main/Dinarobin Resort and Spa Mauritius.jpg" alt="Spring-fed pool">
+      </div>
+      <h3>Swimming Pool</h3>
+      <p>An invigorating escape that instantly refreshes your spirit and lifts your mood on a warm day.</p>
+      <div class="room-card-footer">
+      </div>
+    </article>
+
+    <article class="room-card">
+      <div class="ph ph-room" data-label="Farm-to-table dining hall">
+        <img class="ph-img" src="/S234main/4433299630903510.jpg" alt="Farm-to-table dining hall">
+      </div>
+      <h3>Swimming Pool</h3>
+      <p>The lively heart of the resort, bringing guests together for sun-drenched days and unforgettable evening vibes.</p>
+      <div class="room-card-footer">
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FACILITIES
+     ============================================================ -->
+<section class="facilities reveal" id="facilities">
+  <div class="facilities-inner">
+    <div class="facilities-text">
+      <p class="eyebrow">On the grounds</p>
+      <h2>Everything stays low and quiet</h2>
+      <p>Nothing here is built taller than the treeline. The facilities are spread across the grounds so no single building dominates the view.</p>
+
+      <ul class="facility-list">
+        <li>
+          <span class="facility-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 20L9 8L13 15L16 10L21 20" stroke="#E2793A" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </span>
+          <div><strong>Trailhead access</strong><p>Direct gate onto 40km of public mountain trail, no vehicle needed.</p></div>
+        </li>
+        <li>
+          <span class="facility-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#E2793A" stroke-width="1.6"/><path d="M12 8V12L15 14" stroke="#E2793A" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <div><strong>Spring-fed pool</strong><p>Unheated, cold year-round, filled by the same creek that runs past the lodge.</p></div>
+        </li>
+        <li>
+          <span class="facility-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3C12 3 7 9 7 13.5C7 16.5 9.2 19 12 19C14.8 19 17 16.5 17 13.5C17 9 12 3 12 3Z" stroke="#E2793A" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <div><strong>Farm-to-table dining</strong><p>One shared menu each evening, built around what came in from nearby farms that day.</p></div>
+        </li>
+        <li>
+          <span class="facility-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18C6 14 9 12 12 12C15 12 18 14 20 18" stroke="#E2793A" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="7" r="3" stroke="#E2793A" stroke-width="1.6"/></svg>
+          </span>
+          <div><strong>Guided walks</strong><p>Free ridge walks each morning, led by resort staff who grew up on this mountain.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="facilities-media">
+      <div class="ph ph-tall2" data-label="Trail gate at the edge of the property">
+        <img class="ph-img" src="/S234main/100064422960702118.jpg" alt="Trail gate at the edge of the property">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     RATES
+     ============================================================ -->
+<section class="rates reveal" id="rates">
+  <p class="eyebrow center">Rates</p>
+  <h2 class="center">Simple pricing, no resort fees</h2>
+  <p class="rates-sub center">Rates are per night, based on double occupancy. Breakfast and trail access are included in every rate.</p>
+
+  <div class="rate-grid">
+    <div class="rate-card">
+      <h3>Ridge Cabin</h3>
+      <p class="rate-price">₱4,200<span>/night</span></p>
+      <ul>
+        <li>1 queen bed</li>
+        <li>Wood stove</li>
+        <li>Private porch</li>
+      </ul>
+    </div>
+
+    <div class="rate-card rate-card-featured">
+      <p class="rate-featured-tag">Most booked</p>
+      <h3>Creekside Lodge</h3>
+      <p class="rate-price">₱5,600<span>/night</span></p>
+      <ul>
+        <li>1 queen + day bed</li>
+        <li>Shared creekside porch</li>
+        <li>Steps from the water</li>
+      </ul>
+    </div>
+
+    <div class="rate-card">
+      <h3>Pine House</h3>
+      <p class="rate-price">₱9,800<span>/night</span></p>
+      <ul>
+        <li>2 bedrooms, kitchenette</li>
+        <li>Sleeps up to 5</li>
+        <li>Weekly discount available</li>
+      </ul>
+    </div>
+
+    <div class="rate-card">
+      <h3>Overlook Suite</h3>
+      <p class="rate-price">₱7,400<span>/night</span></p>
+      <ul>
+        <li>King bed</li>
+        <li>Private sunrise deck</li>
+        <li>Sleeps up to 3</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section class="gallery reveal" id="gallery">
+  <p class="eyebrow center">Gallery</p>
+  <h2 class="center">A few views of the mountain</h2>
+
+  <div class="gallery-grid">
+    <div class="ph ph-gal g-tall" data-label="Fog rolling over the ridge">
+        <img class="ph-img" src="/main-photo/728035096095048151 (1).jpg" alt="Fog rolling over the ridge">
+      </div>
+    <div class="ph ph-gal" data-label="Breakfast on the shared porch">
+        <img class="ph-img" src="/main-photo/Mountain Morning_ Cozy Balcony Breakfast.jpg" alt="Breakfast on the shared porch">
+      </div>
+    <div class="ph ph-gal" data-label="Creek crossing on the trail">
+        <img class="ph-img" src="/main-photo/Shielhill Glen.jpg" alt="Creek crossing on the trail">
+      </div>
+    <div class="ph ph-gal g-tall" data-label="Lantern-lit path at night">
+        <img class="ph-img" src="/main-photo/aftermath!.jpg" alt="Lantern-lit path at night">
+      </div>
+    <div class="ph ph-gal" data-label="Cabin interior, wood stove lit">
+        <img class="ph-img" src="/main-photo/The Cabin - Upstairs.jpg" alt="Cabin interior, wood stove lit">
+      </div>
+    <div class="ph ph-gal" data-label="Staff-led morning walk">
+        <img class="ph-img" src="/main-photo/844706473879190059.jpg" alt="Staff-led morning walk">
+      </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     LOCATION
+     ============================================================ -->
+<section class="location reveal" id="location">
+  <div class="location-inner">
+    <div class="location-text">
+      <p class="eyebrow">Front Desk</p>
+      <h2>Here to assist you, 24/7</h2>
+      <p>Our reception team is ready to welcome you, answer your inquiries, and assist with bookings or local arrangements. Whether you need late check-in support, resort info, or day-use inquiries, we're just a message or call away.</p>
+      <ul class="location-details">
+        <li><strong>Address</strong><span>Brgy. Bamban Tagkawayan Quezon, Mountain Public Road, Highland District</span></li>
+        <li><strong>Drive time</strong><span>~2.5 hours from the nearest city center</span></li>
+        <li><strong>Check-in</strong><span>24/7 On-Site Desk (or 6:00 AM – 10:00 PM Daily)</span></li>
+      </ul>
+      <a href="tel:+10000000000" class="btn btn-ghost">Contact Reception or Message Us on Messenger</a>
+    </div>
+    <div class="location-media">
+      <div class="ph ph-map" data-label="Map — replace with embedded map">
+        <img class="ph-img" src="/main-photo/585890232824455270.jpg" alt="Map — replace with embedded map">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BOOK NOW
+     Placed near the bottom of the page, above the footer.
+     ============================================================ -->
+<section class="book reveal" id="book">
+  <div class="book-inner">
+    <div class="book-text">
+      <p class="eyebrow">Reserve</p>
+      <h2>Hold your dates</h2>
+      <p>Fill this in and our front desk will confirm availability and send a payment link within a day.</p>
+    </div>
+
+    <form class="book-form" id="bookForm">
+      <div class="form-row">
+        <label for="bookName">Full name</label>
+        <input type="text" id="bookName" name="name" required placeholder="Juan Dela Cruz">
+      </div>
+      <div class="form-row">
+        <label for="bookEmail">Email</label>
+        <input type="email" id="bookEmail" name="email" required placeholder="you@email.com">
+      </div>
+      <div class="form-row form-row-split">
+        <div>
+          <label for="bookCheckin">Check-in</label>
+          <input type="date" id="bookCheckin" name="checkin" required>
+        </div>
+        <div>
+          <label for="bookCheckout">Check-out</label>
+          <input type="date" id="bookCheckout" name="checkout" required>
+        </div>
+      </div>
+      <div class="form-row form-row-split">
+        <div>
+          <label for="bookGuests">Guests</label>
+          <select id="bookGuests" name="guests">
+            <option>1 guest</option>
+            <option selected>2 guests</option>
+            <option>3 guests</option>
+            <option>4+ guests</option>
+          </select>
+        </div>
+        <div>
+          <label for="bookRoom">Room</label>
+          <select id="bookRoom" name="room">
+            <option>Ridge Cabin</option>
+            <option>Creekside Lodge</option>
+            <option>Pine House</option>
+            <option>Overlook Suite</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-gold btn-full">Send booking request</button>
+      <p class="book-confirm" id="bookConfirm" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     FAQ accordion, email signup, call button, closing links.
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-top">
+
+    <div class="footer-faq">
+      <h3>Questions people ask</h3>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is the resort accessible without a 4x4?<span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Yes, most of the year. After heavy rain the last 2km can get soft — we'll tell you ahead of check-in if a 4x4 is recommended that week.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I bring my dog on the trails?<span class="faq-plus">+</span></button>
+          <div class="faq-a"><p>Dogs are welcome in the Pine House and on-leash on the public trails. They're not permitted in the Lodge or dining hall.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is there a minimum stay?</button>
+          <div class="faq-a"><p>Two nights on weekends, one night on weekdays. No minimum for the Pine House outside of holiday weeks.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you have cell signal on the mountain?</button>
+          <div class="faq-a"><p>Patchy. There's reliable signal at the lodge and front desk; it drops off on most of the trail network — part of the point, honestly.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Stay in the loop</h3>
+      <p>Trail conditions, seasonal rates, and the odd photo. Nothing weekly.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" name="newsletterEmail" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit">Send</button>
+      </form>
+      <p class="newsletter-confirm" id="newsletterConfirm" role="status" aria-live="polite"></p>
+
+      <a href="tel:+10000000000" class="call-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3C6 3 4 4 4 7C4 14 10 20 17 20C20 20 21 18 21 18L17 14L14 16C12.5 15.2 11 13.7 10 12L12 9L8 3H6Z" stroke="#F4EFE3" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Press to call the front desk
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <!-- Same page links as the header nav — edit hrefs/text together if you change one -->
+    <div class="footer-links">
+      <a href="/policies.html">FQAs</a>
+      <a href="/policies.html">Policy</a>
+      <a href="/policies.html">Terms and Conditions</a>
+      <a href="/policies.html">Rules and Regulations</a>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Bomel Mountain Resort. Built on public mountainland.</p>
+  </div>
+</footer>
+
+<script src="main-page.js"></script>
+</body>
+</html>
